@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.sudoku.game.data.Difficulty
 import com.sudoku.game.data.SaveManager
 import com.sudoku.game.data.SaveSlot
+import com.sudoku.game.logic.Board
 import com.sudoku.game.logic.SudokuEngine
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -18,9 +19,9 @@ import java.util.UUID
 // ======================== UI 状态 ========================
 
 data class GameUiState(
-    val puzzle: SudokuEngine.Board = SudokuEngine.emptyBoard(),
-    val solution: SudokuEngine.Board = SudokuEngine.emptyBoard(),
-    val current: SudokuEngine.Board = SudokuEngine.emptyBoard(),
+    val puzzle: Board = SudokuEngine.emptyBoard(),
+    val solution: Board = SudokuEngine.emptyBoard(),
+    val current: Board = SudokuEngine.emptyBoard(),
     val notes: Array<Array<MutableSet<Int>>> = emptyNotes(),
     val selectedCell: Pair<Int, Int>? = null,
     val difficulty: Difficulty = Difficulty.MEDIUM,
@@ -352,9 +353,9 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
         isCompleted = isCompleted
     )
 
-    private fun SudokuEngine.Board.toList2D(): List<List<Int>> =
+    private fun Board.toList2D(): List<List<Int>> =
         this.map { it.toList() }
 
-    private fun List<List<Int>>.toBoard(): SudokuEngine.Board =
+    private fun List<List<Int>>.toBoard(): Board =
         Array(this.size) { r -> this[r].toIntArray() }
 }

@@ -2,15 +2,15 @@ package com.sudoku.game.logic
 
 import kotlin.random.Random
 
+/** 9×9 棋盘，0 表示空 */
+typealias Board = Array<IntArray>
+
 /**
  * Sudoku 核心引擎：生成、求解、校验
  */
 object SudokuEngine {
 
     // ======================== 数据结构 ========================
-
-    /** 9×9 棋盘，0 表示空 */
-    typealias Board = Array<IntArray>
 
     fun emptyBoard(): Board = Array(9) { IntArray(9) }
 

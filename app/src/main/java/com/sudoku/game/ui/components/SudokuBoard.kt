@@ -15,9 +15,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.sudoku.game.logic.Board
 import com.sudoku.game.logic.SudokuEngine
 import com.sudoku.game.ui.theme.*
 
@@ -26,8 +26,8 @@ import com.sudoku.game.ui.theme.*
  */
 @Composable
 fun SudokuBoard(
-    puzzle: SudokuEngine.Board,
-    current: SudokuEngine.Board,
+    puzzle: Board,
+    current: Board,
     notes: Array<Array<Set<Int>>>,
     selectedCell: Pair<Int, Int>?,
     conflicts: Set<Pair<Int, Int>>,
@@ -86,19 +86,13 @@ fun SudokuBoard(
 
                         // 边框
                         val borderEnd = if (c == 2 || c == 5) 1.5.dp else 0.5.dp
-                        val borderBottom = if (r == 2 || r == 5) 1.5.dp else 0.5.dp
                         val borderColorEnd = if (c == 2 || c == 5) thickLine else thinLine
-                        val borderColorBottom = if (r == 2 || r == 5) thickLine else thinLine
 
                         Box(
                             modifier = Modifier
                                 .weight(1f)
                                 .fillMaxHeight()
                                 .background(cellBg)
-                                .border(
-                                    end = Dp.Unspecified,
-                                    bottom = Dp.Unspecified
-                                )
                                 .clickable { onCellClick(r, c) },
                             contentAlignment = Alignment.Center
                         ) {

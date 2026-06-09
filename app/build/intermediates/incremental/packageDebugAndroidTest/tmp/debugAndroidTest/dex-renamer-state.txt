@@ -1,0 +1,4 @@
+#Tue Jun 09 12:15:01 CST 2026
+base.0=D\:\\001-vibecoding\\0608-shudu\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+path.0=0/classes.dex
+renamed.0=classes.dex

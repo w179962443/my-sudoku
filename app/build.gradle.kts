@@ -7,6 +7,7 @@ plugins {
 android {
     namespace = "com.sudoku.game"
     compileSdk = 35
+    setProperty("archivesBaseName", "sudoku")
 
     defaultConfig {
         applicationId = "com.sudoku.game"

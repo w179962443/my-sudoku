@@ -20,7 +20,6 @@ import androidx.compose.ui.unit.sp
 import com.sudoku.game.ui.components.NumberPad
 import com.sudoku.game.ui.components.SudokuBoard
 import com.sudoku.game.viewmodel.GameUiState
-import kotlinx.coroutines.delay
 
 /**
  * 游戏主界面
@@ -40,13 +39,6 @@ fun GameScreen(
     onNewGame: () -> Unit
 ) {
     val isDark = isSystemInDarkTheme()
-
-    // 计时器
-    LaunchedEffect(state.isCompleted) {
-        while (!state.isCompleted) {
-            delay(1000L)
-        }
-    }
 
     Scaffold(
         topBar = {

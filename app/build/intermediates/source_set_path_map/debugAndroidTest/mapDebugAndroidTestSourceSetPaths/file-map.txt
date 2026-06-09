@@ -1,0 +1,4 @@
+com.sudoku.game.test.app-androidTest-0 D:\001-vibecoding\0608-shudu\app\build\generated\res\resValues\androidTest\debug
+com.sudoku.game.test.app-mergeDebugAndroidTestResources-1 D:\001-vibecoding\0608-shudu\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.sudoku.game.test.app-mergeDebugAndroidTestResources-2 D:\001-vibecoding\0608-shudu\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.sudoku.game.test.app-debugAndroidTest-3 D:\001-vibecoding\0608-shudu\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
